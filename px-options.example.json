@@ -1,0 +1,16 @@
+{
+  "service": {
+    "name": "portworx"
+  },
+  "portworx": {
+    "cpus": 1,
+    "mem": 2048,
+    "instances": 3,
+    "kvdb": "${ETCD_ENDPOINT}",
+    "clusterid": "portworx-dcos-demo",
+    "storage": "/dev/xvdf",
+    "headers_dir": "/lib/modules",
+    "mgmtif": "eth0",
+    "dataif": "eth0"
+  }
+}

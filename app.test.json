@@ -1,0 +1,41 @@
+{
+  "id": "px-counter-test",
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "binocarlos/px-counter:latest",
+      "parameters": [{
+         "key": "volume-driver",
+         "value": "pxd"
+      },
+      {
+         "key": "volume",
+         "value": "app-ci-test:/data"
+      }],
+      "network": "BRIDGE",
+      "portMappings": [
+        { "hostPort": 0, "containerPort": 8080, "servicePort": 10001 }
+      ],
+      "forcePullImage": true
+    }
+  },
+  "env": {
+    "FILEPATH": "/data/items.json",
+    "NODE_ENV": "test"
+  },
+  "instances": 1,
+  "cpus": 0.1,
+  "mem": 256,
+  "healthChecks": [{
+      "protocol": "HTTP",
+      "path": "/",
+      "portIndex": 0,
+      "timeoutSeconds": 10,
+      "gracePeriodSeconds": 10,
+      "intervalSeconds": 2,
+      "maxConsecutiveFailures": 10
+  }],
+  "labels":{
+    "HAPROXY_GROUP":"external"
+  }
+}
