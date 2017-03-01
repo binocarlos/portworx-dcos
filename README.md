@@ -100,6 +100,16 @@ You can get your AWS Access Key ID and AWS Secret Acess Key from the [Security C
 
 Also - you will need to create a [key pair](console.aws.amazon.com/ec2/v2/home?#KeyPairs:sort=keyName) in the region you will run your stack.
 
+NOTE: once you have downloaded a key-pair - change permissions and add it to your key-chain:
+
+**in this example the key-pair I downloaded was called `kai-demos.pem`**
+
+```bash
+$ cd ~/.ssh
+$ chmod 600 kai-demos.pem
+$ ssh-add kai-demos.pem
+```
+
 #### Launch cloudformation stack
 
 Now we will use cloud formation to launch a DC/OS cluster with 1 public and 3 private slaves.
