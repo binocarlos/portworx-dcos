@@ -388,5 +388,5 @@ In this blog, we saw how to deploy and run Portworx via DC/OS Universe.  In the 
 
 ## Additional Resources
 
-Learn more about [Docker Cassandra](https://portworx.com/use-case/cassandra-docker-container/)
-Learn more about [Persistent storage for DCOS](https://portworx.com/use-case/persistent-storage-dcos/)
+ * Learn more about [Docker Cassandra](https://portworx.com/use-case/cassandra-docker-container/)
+ * Learn more about [Persistent storage for DCOS](https://portworx.com/use-case/persistent-storage-dcos/)
