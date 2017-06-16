@@ -385,3 +385,8 @@ $ dcos task log --lines 100 px-counter-test
 
 ## Conclusion
 In this blog, we saw how to deploy and run Portworx via DC/OS Universe.  In the next blog post, we'll look at a real world senario for running Cassandra in production using Mesos, Marathon and Portworx.
+
+## Additional Resources
+
+Learn more about [Docker Cassandra](https://portworx.com/use-case/cassandra-docker-container/)
+Learn more about [Persistent storage for DCOS](https://portworx.com/use-case/persistent-storage-dcos/)
